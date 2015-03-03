@@ -160,6 +160,24 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                         </td>
                     </tr>
                     <tr>
+                        <td>Course ID</td>
+                        <td>
+                            <input type="text" name="course_id" value="<?php
+                                if (isset($_POST) && isset($_POST['course_id'])) {
+                                    echo $_POST['course_id'];
+                                }
+                                else echo $row['course_id'];
+                            ?>" />
+                            <span id="ageError" class="error">
+                                <?php
+                                if (isset($errorMessage) && isset($errorMessage['course_id'])) {
+                                    echo $errorMessage['course_id'];
+                                }
+                                ?>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <input type="submit" value="Update Student" name="updateStudent" />

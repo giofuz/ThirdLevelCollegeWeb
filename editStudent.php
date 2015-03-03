@@ -24,8 +24,9 @@ $mobile = $_POST['mobile'];
 $studentNumber = $_POST['studentNumber'];
 $address= $_POST['address'];
 $age = $_POST['age'];
+$course_id = $_POST['course_id'];
 
-$gateway->updateStudent($id, $name, $email, $mobile, $studentNumber, $address, $age);
+$gateway->updateStudent($id, $name, $email, $mobile, $studentNumber, $address, $age, $course_id);
 
 header('Location: home.php');
 

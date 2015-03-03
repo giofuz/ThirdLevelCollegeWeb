@@ -101,6 +101,18 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Course ID</td>
+                        <td>
+                            <input type="text" name="course_id" value="" />
+                            <span id="ageError" class="error">
+                            <?php
+                            if (isset($errorMessage)&& isset ($errorMessage['course_id'])){
+                                echo $errorMessage['course_id'];
+                            }
+                            ?></span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <input type="submit" value="Create Student" name="createStudent" />

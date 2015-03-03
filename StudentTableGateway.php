@@ -57,7 +57,7 @@ class StudentTableGateway {
         return ($statement->rowCount() == 1);
     }
     
-    public function updateStudent($id, $n, $e, $m, $sn, $ad, $ag) {
+    public function updateStudent($id, $n, $e, $m, $sn, $ad, $ag, $cid) {
         $sqlQuery =
                 "UPDATE studentsweb SET " .
                 "name = :name, " .
@@ -65,7 +65,8 @@ class StudentTableGateway {
                 "mobile = :mobile, " .
                 "studentNumber = :studentNumber, " .
                 "address = :address, " .
-                "age = :age " .
+                "age = :age, " .
+                "course_id = :course_id " .
                 "WHERE id = :id";
         
         $statement = $this->connection->prepare($sqlQuery);
@@ -76,18 +77,26 @@ class StudentTableGateway {
             "mobile" => $m,
             "studentNumber" => $sn,
             "address" => $ad,
-            "age" => $ag
+            "age" => $ag,
+            "course_id" => $cid
         );
+        
+       /* echo '<pre>';
+        print_r ($_POST);
+        print_r ($params);
+        print_r ($sqlQuery);
+        echo '</pre>';*/
+        
         
         $status = $statement->execute($params);
 
         return ($statement->rowCount() == 1);
     }
     
-    public function insertStudent($n, $e, $m, $sn, $ad, $ag) {
+    public function insertStudent($n, $e, $m, $sn, $ad, $ag, $cid) {
         $sqlQuery = "INSERT INTO studentsweb " .
-                "(name, email, mobile, studentNumber, address, age) " .
-                "VALUES (:name, :email, :mobile, :studentNumber, :address, :age)";
+                "(name, email, mobile, studentNumber, address, age, course_id) " .
+                "VALUES (:name, :email, :mobile, :studentNumber, :address, :age, :course_id)";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -96,7 +105,8 @@ class StudentTableGateway {
             "mobile" => $m,
             "studentNumber" => $sn,
             "address" => $ad,
-            "age" => $ag
+            "age" => $ag,
+            "course_id" => $cid
         );
         
         $status = $statement->execute($params);

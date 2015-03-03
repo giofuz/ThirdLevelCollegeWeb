@@ -17,6 +17,7 @@ $mobile = filter_input(INPUT_POST, 'mobile', FILTER_SANITIZE_STRING);
 $studentNumber = filter_input(INPUT_POST, 'studentNumber', FILTER_SANITIZE_STRING);
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_STRING);
+$courseID = filter_input(INPUT_POST, 'course_id', FILTER_SANITIZE_STRING);
 
 $errorMessage = array();
 if ($name === FALSE || $name === '') {
@@ -43,6 +44,10 @@ if ($age === FALSE || $age === '') {
     $errorMessage['age'] = 'Age must not be blank<br/>';
 }
 
+if ($courseID === FALSE || $courseID === '') {
+    $errorMessage['course_id'] = 'Course ID must not be blank<br/>';
+}
+
 
     if (!isset($_SESSION['students'])) {
         $students = array();
@@ -66,7 +71,7 @@ if (empty($errorMessage)) {
     
     require 'home.php';*/
     
-    $id = $gateway->insertStudent($name, $email, $mobile, $studentNumber, $address, $age);
+    $id = $gateway->insertStudent($name, $email, $mobile, $studentNumber, $address, $age, $courseID);
 
     $message = "Student created successfully";
 
