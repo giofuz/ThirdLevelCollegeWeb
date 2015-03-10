@@ -254,41 +254,43 @@
                             </div>
 
 	    		<div id="signup" class="modal fade" tabindex="-1">
-            	<div class="modal-dialog">
-                	<div class="modal-content">
-	                    <div class="modal-header">
-	                        <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
-	                        <h3 class="modal-title">Create a username and password</h3>
-	                    </div>
-		                    <div class="modal-body">
-			                    <form class="form-horizontal" role="form" method="post" action="index.php">
-		                        	<div class="form-group col-sm-12">
-								        <label for="name" class="col-sm-2 control-label">Username</label>
-								        <div class="col-sm-8">
-								            <input type="text" class="form-control" id="name" name="name" placeholder="username" value="">
-								        </div>
-								    </div>
-								    <div class="form-group col-sm-12">
-								        <label for="email" class="col-sm-2 control-label">Password</label>
-								        <div class="col-sm-8">
-								            <input type="email" class="form-control" id="password" name="password" placeholder="password" value="">
-								        </div>
-									</div>
-									<div class="form-group col-sm-12">
-								        <label for="email" class="col-sm-2 control-label">Confirm Password</label>
-								        <div class="col-sm-8">
-								            <input type="email" class="form-control" id="password" name="password" placeholder="password" value="">
-								        </div>
-									</div>
-			                    	<div class="modal-footer">
-			                    		<div class="col-sm-6">
-			                        		<button class="btn btn-pink" data-dismiss="modal">Create</button>
-			                        	</div>
-			                    	</div>
-	                    		</form>
-			                </div>
-				        </div>
-			        </div>
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
+                                        <h3 class="modal-title">Create a username and password</h3>
+                                    </div>
+                                        <div class="modal-body">
+                                                <form class="form-horizontal" role="form" method="post" action="home.php">
+                                                    <fieldset>
+                                                        <div class="form-group col-sm-12">
+                                                                            <label for="name" class="col-sm-2 control-label">Username</label>
+                                                                            <div class="col-sm-8">
+                                                                                <input type="text" class="form-control" id="name" name="name" placeholder="username" value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-12">
+                                                                            <label for="email" class="col-sm-2 control-label">Password</label>
+                                                                            <div class="col-sm-8">
+                                                                                <input type="email" class="form-control" id="password" name="password" placeholder="password" value="">
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class="form-group col-sm-12">
+                                                                            <label for="email" class="col-sm-2 control-label">Confirm Password</label>
+                                                                            <div class="col-sm-8">
+                                                                                <input type="email" class="form-control" id="password" name="password" placeholder="password" value="">
+                                                                            </div>
+                                                                            </div>
+                                                        <div class="modal-footer">
+                                                            <div class="col-sm-6">
+                                                                    <button class="btn btn-pink" data-dismiss="modal">Create</button>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                    </div>
+                            </div>
 	    		</div>
 	       <script src="js/jquery.min.js"></script>
 	    	<script src="js/bootstrap.min.js"></script>

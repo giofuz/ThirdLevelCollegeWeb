@@ -84,10 +84,10 @@ $statement = $gateway->getStudents();
                     
                 </li>
                 <li>
-                    <a href="#">Students</a>
+                    <a href="home.php">Students</a>
                 </li>
                 <li>
-                    <a href="#">Courses</a>
+                    <a href="viewCourses.php">Courses</a>
                 </li>
                 <li>
                     <a href="#">Lecturers</a>

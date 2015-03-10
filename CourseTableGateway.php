@@ -9,8 +9,8 @@ class CourseTableGateway {
     }
 
     public function getCourses() {
-        // execute a query to get all managers
-        $sqlQuery = "SELECT * FROM courses";
+        // execute a query to get all courses
+        $sqlQuery = "SELECT * FROM courseweb";
 
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -24,7 +24,7 @@ class CourseTableGateway {
 
     public function getCoursesById($id) {
         // execute a query to get the manager with the specified id
-        $sqlQuery = "SELECT * FROM courses WHERE id = :id";
+        $sqlQuery = "SELECT * FROM courseweb WHERE id = :id";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -40,8 +40,8 @@ class CourseTableGateway {
         return $statement;
     }
 
-    public function insertCourse($n, $d, $c) {
-        $sqlQuery = "INSERT INTO courses " .
+    public function insertCourse($n, $d, $cc) {
+        $sqlQuery = "INSERT INTO courseweb " .
                 "(name, department, course_code) " .
                 "VALUES (:name, :department, :course_code)";
 
@@ -49,7 +49,7 @@ class CourseTableGateway {
         $params = array(
             "name" => $n,
             "department" => $d,
-            "course_code" => $c
+            "course_code" => $cc
         );
 
         $status = $statement->execute($params);
@@ -64,7 +64,7 @@ class CourseTableGateway {
     }
 
     public function deleteCourse($id) {
-        $sqlQuery = "DELETE FROM courses WHERE id = :id";
+        $sqlQuery = "DELETE FROM courseweb WHERE id = :id";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
@@ -80,12 +80,12 @@ class CourseTableGateway {
         return ($statement->rowCount() == 1);
     }
 
-    public function updateCourses($id, $n, $d, $c) {
+    public function updateCourses($id, $n, $d, $cc) {
         $sqlQuery =
-                "UPDATE courses SET " .
+                "UPDATE courseweb SET " .
                 "name = :name, " .
                 "department = :department, " .
-                "course = :course_id " .
+                "course_code = :course_id " .
                 "WHERE id = :id";
 
         $statement = $this->connection->prepare($sqlQuery);
@@ -93,7 +93,7 @@ class CourseTableGateway {
             "id" => $id,
             "name" => $n,
             "department" => $d,
-            "course" => $c
+            "course_code" => $cc
         );
 
         $status = $statement->execute($params);
