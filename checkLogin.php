@@ -42,7 +42,7 @@ if (empty($errorMessage)) {
     header('Location: home.php');
 }
 else {
-    require 'index.php';
+    require 'login.php';
 }
 
 

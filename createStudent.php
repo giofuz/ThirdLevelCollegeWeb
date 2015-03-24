@@ -18,6 +18,10 @@ $studentNumber = filter_input(INPUT_POST, 'studentNumber', FILTER_SANITIZE_STRIN
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_STRING);
 $courseID = filter_input(INPUT_POST, 'course_id', FILTER_SANITIZE_STRING);
+    if ($courseId == -1){
+
+        $courseId = NULL;
+    }
 
 $errorMessage = array();
 if ($name === FALSE || $name === '') {

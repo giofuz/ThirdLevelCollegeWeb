@@ -36,43 +36,51 @@ $statement = $gateway->getStudentById($id);
                 https://github.com/IronSummitMedia/startbootstrap-simple-sidebar -->
 		
     <!-- row 1 -->
-    	<header class="row">
-            <div class="container">
-                 <div class="logo col-lg-1 col-md-1 col-sm-1 col-xs-12">
-                    <img src="images/college.png"> 
-                </div>
-                <div class="loginButtons col-lg-3 col-lg-push-9 col-md-3 col-md-push-8 col-sm-3 col-sm-push-8 col-xs-12">
-                        <ul>
+    	<nav class="navbar navbar-default">
+                      <div class="header container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="images/icon.png">
+                          </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav">
+                            <li><a href="indexDesign.html">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses<span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Computing</a></li>
+                                <li><a href="#">Film</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Art</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          
+                          <div class="user nav navbar-nav navbar-right">
+                            <ul>
                             <li><img src="images/userSmall.png"> 
                                 <?php
                                     $username = $_SESSION['username'];
                                     echo ' Welcome '. $username. ''
                                 ?> </li>
-                            <li><a href="#signup" data-toggle="modal" class="btn btn-sm btn-pink">Logout</a></li>
+                            <li><a href="indexDesign.php" data-toggle="modal" class="btn btn-sm btn-pink">Logout</a></li>
                         </ul>
-                     </div>
-                    <!--<div class="contact col-lg-4 col-lg-offset-5 col-md-5 col-md-offset-3 col-sm-6 col-xs-12 ">-->
-                        <nav class="navbar navbar-default col-lg-5 col-lg-pull-2 col-lg-offset-3 col-md-6 col-md-offset-1 col-md-pull-2 col-sm-7 
-                                    col-sm-pull-2 col-xs-12 " role="navigation" >
-                            <div class ="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
-                                    <span class="sr-only">Toggle Navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            <div class="collapse navbar-collapse" id="collapse">    
-                                <ul class= "nav navbar-nav">
-                                    <li><a href="#" >HOME</a></li>
-                                    <LI><a href="#" >ABOUT</a></LI>
-                                    <li><a href="#" >COURSES</a></li>
-                                    <li><a href="#" >CONTACT</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                       
-                    </div>
-            </header>
+                          </div>
+                        </div><!-- /.navbar-collapse -->
+                      </div><!-- /.container-fluid -->
+                    </nav>
     
     <div id="wrapper">
 
@@ -104,48 +112,81 @@ $statement = $gateway->getStudentById($id);
         </div>
         
         <div id="page-content-wrapper">
+            <div class="container-fluid">  
+                <div class="row2">
+                    <div class="col-lg-3 col-md-6 col-xs-6">
+                        <a href="#"><img src="images/college.png" alt="" class="img-responsive"></p>
+                        <h4>Students</h4></a>
+                          
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-6">
+                        <a href="#"><img src="images/lect.png" alt="" class="img-responsive">
+                        <h4>Lecturers</h4></a>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-6">
+                        <a href="#"><img src="images/emailLarge.png" alt="" class="img-responsive"></p>
+                        <h4>Email</h4></a>
+                       
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-6">
+                        <a href="#"><img src="images/books.png" alt="" class="img-responsive">
+                        <h4>Courses</h4></a>
+                     </div>
+                </div>
+            </div>   
         <table class="table-striped">
+            <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Student Number</th>
+                                <th>Address</th>
+                                <th>Age</th>
+                                <th>Course Name</th>
+                            </tr>
+                        </thead>
             <tbody>
                 <?php
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
-                    echo '<tr>';
-                    echo '<td>Name</td>'
-                    . '<td>' . $row['name'] . '</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>Email</td>'
-                    . '<td>' . $row['email'] . '</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>Mobile</td>'
-                    . '<td>' . $row['mobile'] . '</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>Student Number</td>'
-                    . '<td>' . $row['studentNumber'] . '</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>Address</td>'
-                    . '<td>' . $row['address'] . '</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>Age</td>'
-                    . '<td>' . $row['age'] . '</td>';
-                    echo '</tr>';
-                    echo '<td>Course id</td>'
-                    . '<td>' . $row['course_id'] . '</td>';
-                    echo '</tr>';
+                    echo '<td>' . $row['name'] . '</td>';
+                            echo '<td>' . $row['email'] . '</td>';
+                            echo '<td>' . $row['mobile'] . '</td>';
+                            echo '<td>' . $row['studentNumber'] . '</td>';
+                            echo '<td>' . $row['address'] . '</td>';
+                            echo '<td>' . $row['age'] . '</td>';
+                            echo '<td>' . $row['CourseName'] . '</td>';
+                            echo '<td>'
+                            . '<a href="viewStudent.php?id='.$row['id'].'"><button class="btn btn-green">View</a></button> '
+                            . '<a href="editStudentForm.php?id='.$row['id'].'"><button class="btn btn-green">Edit</a></button> '
+                            . '<a class = "deleteStudent" a href="deleteStudent.php?id='.$row['id'].'"><button class="btn btn-green">Delete</a></button>'
+                            . '</td>';
+                            echo '</tr>';
+
+                            $row = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
             </tbody>
         </table>
-        <p>
-            <button><a href="editStudentForm.php?id=<?php echo $row['id']; ?>">
-                    Edit Student</a></button>
-            <button><a href="deleteStudent.php?id=<?php echo $row['id']; ?>">
-                    Delete Student</a></button>
-            <button><a href="home.php?id=">
-                    Cancel</a></button>
-        </p>
+        <div class="row">    
+            <p>
+                <button class="btn btn-green"><a href="home.php?id=">
+                        Cancel</a></button>
+            </p>
+            <p>
+                <a href="#menu-toggle" class="btn btn-green" id="menu-toggle">Toggle Menu</a> 
+            </p>
         </div>
-    </body>
+    
+     </div>
+        <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script>
+                $("#menu-toggle").click(function(e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+                </script>
+   </body>
 </html>

@@ -10,7 +10,9 @@ class StudentTableGateway {
     
     public function getStudents() {
         // execute a query to get all students
-        $sqlQuery = "SELECT * FROM studentsweb";
+        $sqlQuery = "SELECT s.*, c.name AS CourseName
+                    FROM studentsweb s 
+                    LEFT JOIN courseweb c ON c.id = s.course_id";
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -37,6 +39,27 @@ class StudentTableGateway {
             die("Could not retrieve user");
         }
         
+        return $statement;
+    }
+    
+    public function getStudentsByCourseId($courseID) {
+        // execute a query to get all programmers
+        $sqlQuery =
+                "SELECT s.*, c.name AS CourseName
+                    FROM studentsweb s
+                    LEFT JOIN courseweb c ON c.id = s.course_id
+                    WHERE s.course_id = 1";
+
+        $params = array(
+            'courseId' => $courseId
+        );
+        $statement = $this->connection->prepare($sqlQuery);
+        $status = $statement->execute($params);
+
+        if (!$status) {
+            die("Could not retrieve programmers");
+        }
+
         return $statement;
     }
     
