@@ -1,0 +1,536 @@
+body {
+
+	font-family: 'Raleway', sans-serif;
+        background-color: #ffffff;
+}
+
+.header.container-fluid {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+
+	margin-top: 5px;
+	color:#cccccc;
+}
+.navbar-default .navbar-nav>li>a:hover {
+
+	color:#eeeeee;
+}
+.navbar-default .navbar-nav>li>a:visited {
+
+	color:#eeeeee;
+}
+
+.navbar-default ul {
+
+	padding-left: 0;
+
+}
+.navbar-btn.btn-sm {
+
+	margin-top: 15px;
+}
+
+.navbar-default .navbar-toggle {
+
+	margin-top: 15px;
+}
+
+.navbar-default {
+
+	background-color: #1c1f26;
+	border: none;
+	color: #ffffff;
+	margin-bottom: 0px;
+}
+
+.user.nav.navbar-nav.navbar-right{
+
+	margin-top: 15px;	
+}
+
+.navbar li{
+
+	/*margin-top: 30px;*/
+	display: inline-block;
+	font-size: 13px;	
+	color: #ffffff;
+}
+
+.navbar-toggle{
+
+	background-color: white;
+	border-top: none;
+}
+
+.navbar-brand {
+
+	margin-bottom: 5px;
+}
+
+.jumbotron {
+
+	background-image: url("../images/grad.png");
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	min-height: 680px;
+	margin-bottom: 0px;
+
+}
+
+.jumbotron img {
+
+	max-height: 50%;
+}
+
+.jumbotron h1{
+
+	text-align: center;
+	padding-top: 100px;
+	font-size: 60px;
+	color: white;
+}
+
+.jumbotron p{
+
+	text-align: center;
+	font-size: 16px;
+	color: white;
+
+}
+
+.logo img {
+
+	margin: 10px 0px 10px 0px;
+}
+
+.row2 h4{
+
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #999b9d;
+
+}
+ 
+
+.row6{
+
+	background-image: url("../images/out.png");
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	min-height: 680px;
+	margin-bottom: 0px;
+
+}
+
+.row6 h1{
+
+	text-align: center;
+	padding-top: 100px;
+	font-size: 60px;
+	color: #ee3268;
+}
+
+.row6 p{
+
+	text-align: center;
+	font-size: 18px;
+	color: #ffffff;
+  
+
+}
+
+.row2 p{
+
+	text-align: center;
+	margin-bottom: 20px;
+	color: #c3c4c5;
+
+}
+
+.about h1{
+
+	text-align: center;
+	color: #ee3268;
+	margin: 40px 0px 60px 0px;
+}
+
+.row2 img{
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+}
+
+.row3 {
+
+	margin-top: 50px;
+	background: #1b1f25;
+}
+
+.row3 h1{
+
+	text-align: center;
+	color: white;
+}
+
+.row3 p {
+
+	color: #00b8bb;
+	text-align: center;
+	margin-bottom: 60px;
+
+}
+
+.row3 h4 {
+
+	text-align: center;
+	color: #999b9d;
+	margin-top: 20px;
+	margin-bottom: 40px;
+
+}
+
+.row3 img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.courses {
+
+	margin-top: 40px;
+}
+
+.row4 {
+
+	margin-top: 50px;
+	background: white;
+
+}
+
+.contact h1{
+
+	text-align: center;
+	color: #ee3268;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+.row4 p {
+
+	color: #c3c4c5;
+	text-align: center;
+	margin-bottom: 60px;
+
+}
+
+form {
+
+	margin-bottom: 35px;
+}
+
+.btn-green {
+	
+	color: #00b8bb;
+	background-color: white;
+	border-color: #00b8bb;
+        font-weight: bold;
+}
+
+.btn-login {
+	
+	color: #ffffff;
+	background-color: #00b8bb;
+        border-color: #00b8bb;
+
+}
+
+.btn-pink {
+	
+	color: #ffffff;
+	background-color: #ee3268;
+
+}
+
+.btn-pink2 {
+	
+	color: #ffffff;
+	background-color: transparent;
+        border-color: #ffffff;
+
+}
+
+.btn-login:hover {
+	
+	color: #00b8bb;
+	background-color: #ffffff;
+	border-color: #00b8bb;
+}
+
+.btn-pink:hover {
+	
+	color: #ee3268;
+	background-color: #ffffff;
+	border-color: #ee3268;
+}
+
+.btn-green:hover {
+	
+	color: #ffffff;
+	background-color: #00b8bb;
+
+}
+
+
+footer {
+
+	padding-top: 50px;
+	text-align: left;
+	background: #1b1f25;
+
+}
+
+.followUs li {
+
+	margin-bottom: 5px;
+	margin-right: 5px;
+	list-style-type:none;
+	display: inline-block;
+
+}
+
+.departments li {
+
+	margin-right: 5px;
+	list-style-type:none;
+	display: inline-block;
+
+}
+
+.modal {
+
+	padding-top: 180px;
+}
+
+
+footer h4 {
+
+	color: white;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+footer p {
+
+	color: #a3b1bf;
+	font-size: 12px;
+}
+
+footer li {
+
+	list-style-type: none;
+	color: #a3b1bf;
+	
+}
+
+footer ul {
+
+    list-style:none;
+    padding-left:0;
+}​
+
+.modal {
+
+	padding-top: 180px;
+}
+
+form.form-horizontal {
+
+	border: 0px;
+	margin-bottom: 10px;
+}
+
+.modal p{
+
+	margin-left: 40px;
+}
+
+.modal_link {
+
+	margin-bottom: 10px;
+}
+
+.modal-content a, a:focus, a:hover{
+
+	color: #1b1f25;
+}
+
+/*-------------------------------------home-----------------------------------------*/
+
+/* Found this code on gitHub, its a template for a sidebar in a page 
+https://github.com/IronSummitMedia/startbootstrap-simple-sidebar */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.container-fluid {
+
+	margin-top: 50px;
+        margin-bottom: 50px;
+}
+
+.row2 a {
+
+	text-decoration: none;
+}
+
+.table a {
+    
+    text-decoration: none;
+    
+}
+
+.table a:hover {
+    
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.table a:visted {
+    
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.profile.row {
+    
+    margin: 50px 0px 50px 0px;
+}
+.profile p {
+    
+    margin-top: 15px;
+    padding-left: 50px;
+}

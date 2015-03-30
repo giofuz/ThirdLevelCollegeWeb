@@ -165,7 +165,7 @@ $statement = $gateway->getStudentById($id);
                             . '</td>';
                             echo '</tr>';
 
-                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                $row = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
             </tbody>
         </table>

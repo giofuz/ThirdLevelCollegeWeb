@@ -75,7 +75,7 @@ https://github.com/IronSummitMedia/startbootstrap-simple-sidebar -->
                                 $username = $_SESSION['username'];
                                 echo ' Welcome ' . $username . ''
                                 ?> </li>
-                            <li><a href="indexDesign.php" class="btn btn-sm btn-pink">Logout</a></li>
+                            <li><a href="index.php" class="btn btn-sm btn-pink">Logout</a></li>
                         </ul>
                     </div>
                 </div><!-- /.navbar-collapse -->

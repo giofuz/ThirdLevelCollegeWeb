@@ -12,7 +12,7 @@ class StudentTableGateway {
         // execute a query to get all students
         $sqlQuery = "SELECT s.*, c.name AS CourseName
                     FROM studentsweb s 
-                    LEFT JOIN courseweb c ON c.id = s.course_id";
+                    LEFT JOIN courseweb c ON c.id = s.course_id"; 
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
